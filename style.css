@@ -132,7 +132,7 @@ body {
 
 body {
   background-color: var(--body-bg);
-  color: #e1e1e1;
+  color: var(--body-color);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -177,7 +177,7 @@ body {
   border-radius: 50%;
   background-size: 400% 400%;
   background-position: 0 0;
-  animation: bg-in 300ms ease-in forwards 1;
+  animation: bg-out 300ms ease-in forwards 1;
 }
 
 .card:hover .img {
@@ -218,11 +218,22 @@ body {
     width: calc(100% - 20px);
   }
 }
+
 @keyframes bg-in {
   0% {
-    background-position: 0% 100%;
-  }
-  100% {
     background-position: 0% 50%;
   }
+  100% {
+    background-position: 0% 100%;
+  }
 }
+
+@keyframes bg-out {
+    0% {
+      background-position: 0% 100%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
